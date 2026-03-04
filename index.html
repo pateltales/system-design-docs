@@ -29,12 +29,17 @@
       flex-direction: column;
       overflow: hidden;
       border-right: 1px solid #1e293b;
+      transition: transform 0.25s ease;
+      z-index: 100;
     }
 
     .sidebar-header {
       padding: 18px 16px 14px;
       border-bottom: 1px solid #1e293b;
       flex-shrink: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
     }
 
     .sidebar-header h1 {
@@ -49,6 +54,73 @@
       font-size: 11px;
       color: #475569;
       margin-top: 3px;
+    }
+
+    /* ── Hamburger / Close button ── */
+    #menu-toggle, #sidebar-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #94a3b8;
+      padding: 2px 4px;
+      display: none;
+      line-height: 1;
+    }
+    #menu-toggle:hover, #sidebar-close:hover { color: #f8fafc; }
+    #menu-toggle { font-size: 22px; }
+    #sidebar-close { font-size: 20px; margin-top: -2px; }
+
+    /* ── Mobile top bar ── */
+    #mobile-bar {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      flex-shrink: 0;
+    }
+    #mobile-bar span {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f8fafc;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── Overlay ── */
+    #sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 99;
+    }
+    #sidebar-overlay.visible { display: block; }
+
+    @media (max-width: 640px) {
+      body { flex-direction: column; }
+
+      #mobile-bar { display: flex; }
+      #menu-toggle { display: block; }
+      #sidebar-close { display: block; }
+
+      #sidebar {
+        position: fixed;
+        left: 0; top: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+      }
+      #sidebar.open { transform: translateX(0); }
+
+      #content-wrapper { height: 100vh; }
+
+      #breadcrumb { padding: 10px 16px; }
+      #markdown-content { padding: 24px 18px 48px; }
+      #welcome { padding: 32px 20px; }
     }
 
     #nav-tree {
@@ -297,10 +369,20 @@
 </head>
 <body>
 
+<div id="sidebar-overlay"></div>
+
+<div id="mobile-bar">
+  <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+  <span>HLD Docs</span>
+</div>
+
 <nav id="sidebar">
   <div class="sidebar-header">
-    <h1>HLD Docs</h1>
-    <p>System Design Library</p>
+    <div>
+      <h1>HLD Docs</h1>
+      <p>System Design Library</p>
+    </div>
+    <button id="sidebar-close" aria-label="Close menu">&times;</button>
   </div>
   <div id="nav-tree"></div>
 </nav>
@@ -380,7 +462,7 @@
       el.className = 'nav-file';
       el.dataset.path = file.path;
       el.innerHTML = `<span class="file-dot"></span><span>${toTitleCase(file.name)}</span>`;
-      el.addEventListener('click', () => loadFile(file.path));
+      el.addEventListener('click', () => { loadFile(file.path); closeSidebar(); });
       container.appendChild(el);
     }
   }
@@ -451,6 +533,15 @@
 
     document.getElementById('content-wrapper').scrollTop = 0;
   }
+
+  // Mobile sidebar toggle
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+  function openSidebar() { sidebar.classList.add('open'); overlay.classList.add('visible'); }
+  function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('visible'); }
+  document.getElementById('menu-toggle').addEventListener('click', openSidebar);
+  document.getElementById('sidebar-close').addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
 
   marked.setOptions({ gfm: true, breaks: false });
   init();
