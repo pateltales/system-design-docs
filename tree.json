@@ -1,0 +1,1483 @@
+{
+  "files": [],
+  "dirs": [
+    {
+      "name": "api-gateway",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "api-gateway/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "api-gateway/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-request-routing-engine",
+              "path": "api-gateway/design/03-request-routing-engine.md"
+            },
+            {
+              "name": "04-rate-limiting-and-throttling",
+              "path": "api-gateway/design/04-rate-limiting-and-throttling.md"
+            },
+            {
+              "name": "05-authentication-and-authorization",
+              "path": "api-gateway/design/05-authentication-and-authorization.md"
+            },
+            {
+              "name": "06-load-balancing-and-service-discovery",
+              "path": "api-gateway/design/06-load-balancing-and-service-discovery.md"
+            },
+            {
+              "name": "07-circuit-breaking-and-resilience",
+              "path": "api-gateway/design/07-circuit-breaking-and-resilience.md"
+            },
+            {
+              "name": "08-plugin-and-middleware-architecture",
+              "path": "api-gateway/design/08-plugin-and-middleware-architecture.md"
+            },
+            {
+              "name": "09-observability-and-monitoring",
+              "path": "api-gateway/design/09-observability-and-monitoring.md"
+            },
+            {
+              "name": "10-scaling-and-performance",
+              "path": "api-gateway/design/10-scaling-and-performance.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "api-gateway/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "api-gateway/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "autocomplete",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "api-contracts",
+              "path": "autocomplete/design/api-contracts.md"
+            },
+            {
+              "name": "data-collection-pipeline",
+              "path": "autocomplete/design/data-collection-pipeline.md"
+            },
+            {
+              "name": "flow",
+              "path": "autocomplete/design/flow.md"
+            },
+            {
+              "name": "interview-simulation",
+              "path": "autocomplete/design/interview-simulation.md"
+            },
+            {
+              "name": "scaling-and-caching",
+              "path": "autocomplete/design/scaling-and-caching.md"
+            },
+            {
+              "name": "trie-and-ranking-deep-dive",
+              "path": "autocomplete/design/trie-and-ranking-deep-dive.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "aws",
+      "files": [
+        {
+          "name": "aws-services-technical-deep-dive",
+          "path": "aws/aws-services-technical-deep-dive.md"
+        }
+      ],
+      "dirs": [
+        {
+          "name": "ddb",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "capacity-and-scaling",
+                  "path": "aws/ddb/design/capacity-and-scaling.md"
+                },
+                {
+                  "name": "consistency-model",
+                  "path": "aws/ddb/design/consistency-model.md"
+                },
+                {
+                  "name": "dynamodb-streams",
+                  "path": "aws/ddb/design/dynamodb-streams.md"
+                },
+                {
+                  "name": "global-tables",
+                  "path": "aws/ddb/design/global-tables.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/ddb/design/interview-simulation.md"
+                },
+                {
+                  "name": "partitioning-model",
+                  "path": "aws/ddb/design/partitioning-model.md"
+                },
+                {
+                  "name": "prompt",
+                  "path": "aws/ddb/design/prompt.md"
+                },
+                {
+                  "name": "secondary-indexes",
+                  "path": "aws/ddb/design/secondary-indexes.md"
+                },
+                {
+                  "name": "storage-and-replication",
+                  "path": "aws/ddb/design/storage-and-replication.md"
+                },
+                {
+                  "name": "transactions",
+                  "path": "aws/ddb/design/transactions.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "ecs",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "capacity-providers",
+                  "path": "aws/ecs/design/capacity-providers.md"
+                },
+                {
+                  "name": "cluster-architecture",
+                  "path": "aws/ecs/design/cluster-architecture.md"
+                },
+                {
+                  "name": "deployment-strategies",
+                  "path": "aws/ecs/design/deployment-strategies.md"
+                },
+                {
+                  "name": "fargate-architecture",
+                  "path": "aws/ecs/design/fargate-architecture.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/ecs/design/interview-simulation.md"
+                },
+                {
+                  "name": "monitoring-and-operations",
+                  "path": "aws/ecs/design/monitoring-and-operations.md"
+                },
+                {
+                  "name": "networking-and-service-discovery",
+                  "path": "aws/ecs/design/networking-and-service-discovery.md"
+                },
+                {
+                  "name": "prompt",
+                  "path": "aws/ecs/design/prompt.md"
+                },
+                {
+                  "name": "task-placement",
+                  "path": "aws/ecs/design/task-placement.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "emr",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "cluster-architecture",
+                  "path": "aws/emr/design/cluster-architecture.md"
+                },
+                {
+                  "name": "emr-serverless-and-eks",
+                  "path": "aws/emr/design/emr-serverless-and-eks.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/emr/design/interview-simulation.md"
+                },
+                {
+                  "name": "prompt",
+                  "path": "aws/emr/design/prompt.md"
+                },
+                {
+                  "name": "resource-management",
+                  "path": "aws/emr/design/resource-management.md"
+                },
+                {
+                  "name": "scaling-and-instance-management",
+                  "path": "aws/emr/design/scaling-and-instance-management.md"
+                },
+                {
+                  "name": "step-execution-and-job-lifecycle",
+                  "path": "aws/emr/design/step-execution-and-job-lifecycle.md"
+                },
+                {
+                  "name": "storage-layer",
+                  "path": "aws/emr/design/storage-layer.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "kinesis",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "prompt",
+                  "path": "aws/kinesis/design/prompt.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "lambda",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "execution-environment-lifecycle",
+                  "path": "aws/lambda/design/execution-environment-lifecycle.md"
+                },
+                {
+                  "name": "firecracker-deep-dive",
+                  "path": "aws/lambda/design/firecracker-deep-dive.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/lambda/design/interview-simulation.md"
+                },
+                {
+                  "name": "invocation-models",
+                  "path": "aws/lambda/design/invocation-models.md"
+                },
+                {
+                  "name": "prompt",
+                  "path": "aws/lambda/design/prompt.md"
+                },
+                {
+                  "name": "vpc-networking",
+                  "path": "aws/lambda/design/vpc-networking.md"
+                },
+                {
+                  "name": "worker-fleet-and-placement",
+                  "path": "aws/lambda/design/worker-fleet-and-placement.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "opensearch",
+          "files": [
+            {
+              "name": "prompt",
+              "path": "aws/opensearch/prompt.md"
+            }
+          ],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "01-interview-simulation",
+                  "path": "aws/opensearch/design/01-interview-simulation.md"
+                },
+                {
+                  "name": "02-api-contracts",
+                  "path": "aws/opensearch/design/02-api-contracts.md"
+                },
+                {
+                  "name": "03-indexing-and-inverted-index",
+                  "path": "aws/opensearch/design/03-indexing-and-inverted-index.md"
+                },
+                {
+                  "name": "04-search-and-relevance",
+                  "path": "aws/opensearch/design/04-search-and-relevance.md"
+                },
+                {
+                  "name": "05-sharding-and-distribution",
+                  "path": "aws/opensearch/design/05-sharding-and-distribution.md"
+                },
+                {
+                  "name": "06-aws-managed-service",
+                  "path": "aws/opensearch/design/06-aws-managed-service.md"
+                },
+                {
+                  "name": "07-log-analytics-pipeline",
+                  "path": "aws/opensearch/design/07-log-analytics-pipeline.md"
+                },
+                {
+                  "name": "08-performance-and-scaling",
+                  "path": "aws/opensearch/design/08-performance-and-scaling.md"
+                },
+                {
+                  "name": "09-advanced-features",
+                  "path": "aws/opensearch/design/09-advanced-features.md"
+                },
+                {
+                  "name": "10-design-trade-offs",
+                  "path": "aws/opensearch/design/10-design-trade-offs.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "redshift",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "columnar-storage",
+                  "path": "aws/redshift/design/columnar-storage.md"
+                },
+                {
+                  "name": "concurrency-and-wlm",
+                  "path": "aws/redshift/design/concurrency-and-wlm.md"
+                },
+                {
+                  "name": "distribution-and-sort-keys",
+                  "path": "aws/redshift/design/distribution-and-sort-keys.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/redshift/design/interview-simulation.md"
+                },
+                {
+                  "name": "prompt",
+                  "path": "aws/redshift/design/prompt.md"
+                },
+                {
+                  "name": "query-processing",
+                  "path": "aws/redshift/design/query-processing.md"
+                },
+                {
+                  "name": "spectrum-and-data-lake",
+                  "path": "aws/redshift/design/spectrum-and-data-lake.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "s3",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "api-contracts",
+                  "path": "aws/s3/design/api-contracts.md"
+                },
+                {
+                  "name": "consistency-and-replication",
+                  "path": "aws/s3/design/consistency-and-replication.md"
+                },
+                {
+                  "name": "data-storage-and-durability",
+                  "path": "aws/s3/design/data-storage-and-durability.md"
+                },
+                {
+                  "name": "flow",
+                  "path": "aws/s3/design/flow.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/s3/design/interview-simulation.md"
+                },
+                {
+                  "name": "metadata-and-indexing",
+                  "path": "aws/s3/design/metadata-and-indexing.md"
+                },
+                {
+                  "name": "scaling-and-performance",
+                  "path": "aws/s3/design/scaling-and-performance.md"
+                },
+                {
+                  "name": "security-and-access-control",
+                  "path": "aws/s3/design/security-and-access-control.md"
+                },
+                {
+                  "name": "storage-classes-and-lifecycle",
+                  "path": "aws/s3/design/storage-classes-and-lifecycle.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "sns",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "delivery-and-retries",
+                  "path": "aws/sns/design/delivery-and-retries.md"
+                },
+                {
+                  "name": "fan-out-engine",
+                  "path": "aws/sns/design/fan-out-engine.md"
+                },
+                {
+                  "name": "fifo-topics",
+                  "path": "aws/sns/design/fifo-topics.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/sns/design/interview-simulation.md"
+                },
+                {
+                  "name": "message-filtering",
+                  "path": "aws/sns/design/message-filtering.md"
+                },
+                {
+                  "name": "mobile-push",
+                  "path": "aws/sns/design/mobile-push.md"
+                },
+                {
+                  "name": "prompt",
+                  "path": "aws/sns/design/prompt.md"
+                },
+                {
+                  "name": "sns-sqs-fanout",
+                  "path": "aws/sns/design/sns-sqs-fanout.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        },
+        {
+          "name": "sqs",
+          "files": [],
+          "dirs": [
+            {
+              "name": "design",
+              "files": [
+                {
+                  "name": "api-contracts",
+                  "path": "aws/sqs/design/api-contracts.md"
+                },
+                {
+                  "name": "data-storage-and-durability",
+                  "path": "aws/sqs/design/data-storage-and-durability.md"
+                },
+                {
+                  "name": "delivery-guarantees-and-ordering",
+                  "path": "aws/sqs/design/delivery-guarantees-and-ordering.md"
+                },
+                {
+                  "name": "flow",
+                  "path": "aws/sqs/design/flow.md"
+                },
+                {
+                  "name": "interview-simulation",
+                  "path": "aws/sqs/design/interview-simulation.md"
+                },
+                {
+                  "name": "message-lifecycle",
+                  "path": "aws/sqs/design/message-lifecycle.md"
+                },
+                {
+                  "name": "prompt",
+                  "path": "aws/sqs/design/prompt.md"
+                },
+                {
+                  "name": "scaling-and-performance",
+                  "path": "aws/sqs/design/scaling-and-performance.md"
+                }
+              ],
+              "dirs": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "chatapp",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "chatapp/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "chatapp/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-messaging-and-delivery",
+              "path": "chatapp/design/03-messaging-and-delivery.md"
+            },
+            {
+              "name": "04-connection-and-presence",
+              "path": "chatapp/design/04-connection-and-presence.md"
+            },
+            {
+              "name": "05-end-to-end-encryption",
+              "path": "chatapp/design/05-end-to-end-encryption.md"
+            },
+            {
+              "name": "06-storage-and-data-model",
+              "path": "chatapp/design/06-storage-and-data-model.md"
+            },
+            {
+              "name": "07-group-messaging",
+              "path": "chatapp/design/07-group-messaging.md"
+            },
+            {
+              "name": "08-media-handling",
+              "path": "chatapp/design/08-media-handling.md"
+            },
+            {
+              "name": "09-notifications-and-offline",
+              "path": "chatapp/design/09-notifications-and-offline.md"
+            },
+            {
+              "name": "10-scaling-and-reliability",
+              "path": "chatapp/design/10-scaling-and-reliability.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "chatapp/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "chatapp/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "datastore",
+      "files": [],
+      "dirs": [
+        {
+          "name": "internals",
+          "files": [
+            {
+              "name": "01-fundamentals",
+              "path": "datastore/internals/01-fundamentals.md"
+            },
+            {
+              "name": "02-btree-deep-dive",
+              "path": "datastore/internals/02-btree-deep-dive.md"
+            },
+            {
+              "name": "03-lsm-tree-deep-dive",
+              "path": "datastore/internals/03-lsm-tree-deep-dive.md"
+            },
+            {
+              "name": "04-hash-index",
+              "path": "datastore/internals/04-hash-index.md"
+            },
+            {
+              "name": "05-column-stores",
+              "path": "datastore/internals/05-column-stores.md"
+            },
+            {
+              "name": "06-comparison-and-when-to-use-what",
+              "path": "datastore/internals/06-comparison-and-when-to-use-what.md"
+            },
+            {
+              "name": "07-indexing",
+              "path": "datastore/internals/07-indexing.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "distributedcache",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "distributedcache/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "distributedcache/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-threading-and-event-loop",
+              "path": "distributedcache/design/03-threading-and-event-loop.md"
+            },
+            {
+              "name": "04-data-structures-and-encodings",
+              "path": "distributedcache/design/04-data-structures-and-encodings.md"
+            },
+            {
+              "name": "05-persistence-deep-dive",
+              "path": "distributedcache/design/05-persistence-deep-dive.md"
+            },
+            {
+              "name": "06-replication-deep-dive",
+              "path": "distributedcache/design/06-replication-deep-dive.md"
+            },
+            {
+              "name": "07-clustering-deep-dive",
+              "path": "distributedcache/design/07-clustering-deep-dive.md"
+            },
+            {
+              "name": "08-memory-and-eviction",
+              "path": "distributedcache/design/08-memory-and-eviction.md"
+            },
+            {
+              "name": "09-expiry-and-ttl",
+              "path": "distributedcache/design/09-expiry-and-ttl.md"
+            },
+            {
+              "name": "10-scaling-and-performance",
+              "path": "distributedcache/design/10-scaling-and-performance.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "distributedcache/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "distributedcache/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "docs",
+      "files": [
+        {
+          "name": "system-design-preparation-guide",
+          "path": "docs/system-design-preparation-guide.md"
+        }
+      ],
+      "dirs": []
+    },
+    {
+      "name": "dropbox",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "dropbox/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "dropbox/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-file-sync-engine",
+              "path": "dropbox/design/03-file-sync-engine.md"
+            },
+            {
+              "name": "04-chunked-upload-and-dedup",
+              "path": "dropbox/design/04-chunked-upload-and-dedup.md"
+            },
+            {
+              "name": "05-metadata-service",
+              "path": "dropbox/design/05-metadata-service.md"
+            },
+            {
+              "name": "06-block-storage",
+              "path": "dropbox/design/06-block-storage.md"
+            },
+            {
+              "name": "07-sharing-and-permissions",
+              "path": "dropbox/design/07-sharing-and-permissions.md"
+            },
+            {
+              "name": "08-notification-and-change-propagation",
+              "path": "dropbox/design/08-notification-and-change-propagation.md"
+            },
+            {
+              "name": "09-conflict-resolution",
+              "path": "dropbox/design/09-conflict-resolution.md"
+            },
+            {
+              "name": "10-scaling-and-reliability",
+              "path": "dropbox/design/10-scaling-and-reliability.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "dropbox/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "dropbox/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "facebook-reactions",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "facebook-reactions/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "facebook-reactions/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-data-model-and-storage",
+              "path": "facebook-reactions/design/03-data-model-and-storage.md"
+            },
+            {
+              "name": "04-write-path",
+              "path": "facebook-reactions/design/04-write-path.md"
+            },
+            {
+              "name": "05-read-path",
+              "path": "facebook-reactions/design/05-read-path.md"
+            },
+            {
+              "name": "06-notification-pipeline",
+              "path": "facebook-reactions/design/06-notification-pipeline.md"
+            },
+            {
+              "name": "07-celebrity-and-hot-key-problem",
+              "path": "facebook-reactions/design/07-celebrity-and-hot-key-problem.md"
+            },
+            {
+              "name": "08-reaction-types-and-extensibility",
+              "path": "facebook-reactions/design/08-reaction-types-and-extensibility.md"
+            },
+            {
+              "name": "09-consistency-and-accuracy",
+              "path": "facebook-reactions/design/09-consistency-and-accuracy.md"
+            },
+            {
+              "name": "10-scaling-and-reliability",
+              "path": "facebook-reactions/design/10-scaling-and-reliability.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "facebook-reactions/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "facebook-reactions/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "google-docs",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "google-docs/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "google-docs/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-operational-transformation",
+              "path": "google-docs/design/03-operational-transformation.md"
+            },
+            {
+              "name": "04-document-storage",
+              "path": "google-docs/design/04-document-storage.md"
+            },
+            {
+              "name": "05-cursor-and-presence",
+              "path": "google-docs/design/05-cursor-and-presence.md"
+            },
+            {
+              "name": "06-conflict-resolution-and-consistency",
+              "path": "google-docs/design/06-conflict-resolution-and-consistency.md"
+            },
+            {
+              "name": "07-offline-support",
+              "path": "google-docs/design/07-offline-support.md"
+            },
+            {
+              "name": "08-permission-and-sharing",
+              "path": "google-docs/design/08-permission-and-sharing.md"
+            },
+            {
+              "name": "09-rich-text-and-formatting",
+              "path": "google-docs/design/09-rich-text-and-formatting.md"
+            },
+            {
+              "name": "10-scaling-and-reliability",
+              "path": "google-docs/design/10-scaling-and-reliability.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "google-docs/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "google-docs/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "instagram/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "instagram/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-media-processing-pipeline",
+              "path": "instagram/design/03-media-processing-pipeline.md"
+            },
+            {
+              "name": "04-news-feed-generation",
+              "path": "instagram/design/04-news-feed-generation.md"
+            },
+            {
+              "name": "05-social-graph",
+              "path": "instagram/design/05-social-graph.md"
+            },
+            {
+              "name": "06-stories-and-reels",
+              "path": "instagram/design/06-stories-and-reels.md"
+            },
+            {
+              "name": "07-content-delivery-cdn",
+              "path": "instagram/design/07-content-delivery-cdn.md"
+            },
+            {
+              "name": "08-search-and-explore",
+              "path": "instagram/design/08-search-and-explore.md"
+            },
+            {
+              "name": "09-data-storage-and-caching",
+              "path": "instagram/design/09-data-storage-and-caching.md"
+            },
+            {
+              "name": "10-notifications-and-real-time",
+              "path": "instagram/design/10-notifications-and-real-time.md"
+            },
+            {
+              "name": "11-scaling-and-performance",
+              "path": "instagram/design/11-scaling-and-performance.md"
+            },
+            {
+              "name": "12-design-trade-offs",
+              "path": "instagram/design/12-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "instagram/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "keyvaluestore",
+      "files": [],
+      "dirs": [
+        {
+          "name": "system",
+          "files": [
+            {
+              "name": "api-contracts",
+              "path": "keyvaluestore/system/api-contracts.md"
+            },
+            {
+              "name": "consistency-and-replication",
+              "path": "keyvaluestore/system/consistency-and-replication.md"
+            },
+            {
+              "name": "datastore-design",
+              "path": "keyvaluestore/system/datastore-design.md"
+            },
+            {
+              "name": "flow",
+              "path": "keyvaluestore/system/flow.md"
+            },
+            {
+              "name": "interview-simulation",
+              "path": "keyvaluestore/system/interview-simulation.md"
+            },
+            {
+              "name": "partitioning-deep-dive",
+              "path": "keyvaluestore/system/partitioning-deep-dive.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "metricsmonitoring",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "metricsmonitoring/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "metricsmonitoring/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-time-series-database",
+              "path": "metricsmonitoring/design/03-time-series-database.md"
+            },
+            {
+              "name": "04-collection-and-ingestion",
+              "path": "metricsmonitoring/design/04-collection-and-ingestion.md"
+            },
+            {
+              "name": "05-query-engine-and-language",
+              "path": "metricsmonitoring/design/05-query-engine-and-language.md"
+            },
+            {
+              "name": "06-alerting-pipeline",
+              "path": "metricsmonitoring/design/06-alerting-pipeline.md"
+            },
+            {
+              "name": "07-dashboarding-and-visualization",
+              "path": "metricsmonitoring/design/07-dashboarding-and-visualization.md"
+            },
+            {
+              "name": "08-scaling-and-reliability",
+              "path": "metricsmonitoring/design/08-scaling-and-reliability.md"
+            },
+            {
+              "name": "09-design-trade-offs",
+              "path": "metricsmonitoring/design/09-design-trade-offs.md"
+            },
+            {
+              "name": "10-metrics-for-monitoring-systems",
+              "path": "metricsmonitoring/design/10-metrics-for-monitoring-systems.md"
+            },
+            {
+              "name": "prompt",
+              "path": "metricsmonitoring/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "netflix",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "netflix/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "netflix/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-video-encoding-pipeline",
+              "path": "netflix/design/03-video-encoding-pipeline.md"
+            },
+            {
+              "name": "04-adaptive-bitrate-streaming",
+              "path": "netflix/design/04-adaptive-bitrate-streaming.md"
+            },
+            {
+              "name": "05-content-delivery-cdn",
+              "path": "netflix/design/05-content-delivery-cdn.md"
+            },
+            {
+              "name": "06-metadata-and-catalog",
+              "path": "netflix/design/06-metadata-and-catalog.md"
+            },
+            {
+              "name": "07-recommendation-engine",
+              "path": "netflix/design/07-recommendation-engine.md"
+            },
+            {
+              "name": "08-data-storage-and-caching",
+              "path": "netflix/design/08-data-storage-and-caching.md"
+            },
+            {
+              "name": "09-microservices-and-resilience",
+              "path": "netflix/design/09-microservices-and-resilience.md"
+            },
+            {
+              "name": "10-scaling-and-performance",
+              "path": "netflix/design/10-scaling-and-performance.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "netflix/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "netflix/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "payment-system",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "payment-system/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "payment-system/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-payment-flow-lifecycle",
+              "path": "payment-system/design/03-payment-flow-lifecycle.md"
+            },
+            {
+              "name": "04-idempotency-and-exactly-once",
+              "path": "payment-system/design/04-idempotency-and-exactly-once.md"
+            },
+            {
+              "name": "05-ledger-and-double-entry",
+              "path": "payment-system/design/05-ledger-and-double-entry.md"
+            },
+            {
+              "name": "06-fraud-detection",
+              "path": "payment-system/design/06-fraud-detection.md"
+            },
+            {
+              "name": "07-payment-routing",
+              "path": "payment-system/design/07-payment-routing.md"
+            },
+            {
+              "name": "08-data-storage-and-infrastructure",
+              "path": "payment-system/design/08-data-storage-and-infrastructure.md"
+            },
+            {
+              "name": "09-reliability-and-observability",
+              "path": "payment-system/design/09-reliability-and-observability.md"
+            },
+            {
+              "name": "10-scaling-and-performance",
+              "path": "payment-system/design/10-scaling-and-performance.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "payment-system/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "payment-system/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "ratelimiter",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "ratelimiter/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "ratelimiter/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-rate-limiting-algorithms",
+              "path": "ratelimiter/design/03-rate-limiting-algorithms.md"
+            },
+            {
+              "name": "04-distributed-rate-limiting",
+              "path": "ratelimiter/design/04-distributed-rate-limiting.md"
+            },
+            {
+              "name": "05-rules-engine",
+              "path": "ratelimiter/design/05-rules-engine.md"
+            },
+            {
+              "name": "06-multi-layer-rate-limiting",
+              "path": "ratelimiter/design/06-multi-layer-rate-limiting.md"
+            },
+            {
+              "name": "07-monitoring-and-observability",
+              "path": "ratelimiter/design/07-monitoring-and-observability.md"
+            },
+            {
+              "name": "08-design-trade-offs",
+              "path": "ratelimiter/design/08-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "ratelimiter/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "tinyurl",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "api-contracts",
+              "path": "tinyurl/design/api-contracts.md"
+            },
+            {
+              "name": "flow",
+              "path": "tinyurl/design/flow.md"
+            },
+            {
+              "name": "interview-simulation",
+              "path": "tinyurl/design/interview-simulation.md"
+            },
+            {
+              "name": "key-generation-deep-dive",
+              "path": "tinyurl/design/key-generation-deep-dive.md"
+            },
+            {
+              "name": "scaling-and-caching",
+              "path": "tinyurl/design/scaling-and-caching.md"
+            },
+            {
+              "name": "sql-vs-nosql-tradeoffs",
+              "path": "tinyurl/design/sql-vs-nosql-tradeoffs.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "twitter",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "api-contracts",
+              "path": "twitter/design/api-contracts.md"
+            },
+            {
+              "name": "datastore-design",
+              "path": "twitter/design/datastore-design.md"
+            },
+            {
+              "name": "interview-simulation",
+              "path": "twitter/design/interview-simulation.md"
+            },
+            {
+              "name": "media-upload-flow",
+              "path": "twitter/design/media-upload-flow.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "uber",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "00-verified-research",
+              "path": "uber/design/00-verified-research.md"
+            },
+            {
+              "name": "01-interview-simulation",
+              "path": "uber/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "uber/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-geospatial-indexing",
+              "path": "uber/design/03-geospatial-indexing.md"
+            },
+            {
+              "name": "04-dispatch-and-matching",
+              "path": "uber/design/04-dispatch-and-matching.md"
+            },
+            {
+              "name": "05-eta-and-routing",
+              "path": "uber/design/05-eta-and-routing.md"
+            },
+            {
+              "name": "06-surge-pricing",
+              "path": "uber/design/06-surge-pricing.md"
+            },
+            {
+              "name": "07-trip-lifecycle-and-payments",
+              "path": "uber/design/07-trip-lifecycle-and-payments.md"
+            },
+            {
+              "name": "08-real-time-communication",
+              "path": "uber/design/08-real-time-communication.md"
+            },
+            {
+              "name": "09-data-storage-and-analytics",
+              "path": "uber/design/09-data-storage-and-analytics.md"
+            },
+            {
+              "name": "10-scaling-and-reliability",
+              "path": "uber/design/10-scaling-and-reliability.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "uber/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "uber/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "uniqueidgen",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "api-contracts",
+              "path": "uniqueidgen/design/api-contracts.md"
+            },
+            {
+              "name": "flow",
+              "path": "uniqueidgen/design/flow.md"
+            },
+            {
+              "name": "interview-simulation",
+              "path": "uniqueidgen/design/interview-simulation.md"
+            },
+            {
+              "name": "naive-to-scale-evolution",
+              "path": "uniqueidgen/design/naive-to-scale-evolution.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "viewcounter",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "viewcounter/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-design",
+              "path": "viewcounter/design/02-api-design.md"
+            },
+            {
+              "name": "03-deep-dive-write-path",
+              "path": "viewcounter/design/03-deep-dive-write-path.md"
+            },
+            {
+              "name": "04-deep-dive-read-path",
+              "path": "viewcounter/design/04-deep-dive-read-path.md"
+            },
+            {
+              "name": "05-deep-dive-fraud-detection",
+              "path": "viewcounter/design/05-deep-dive-fraud-detection.md"
+            },
+            {
+              "name": "06-deep-dive-scale-and-storage",
+              "path": "viewcounter/design/06-deep-dive-scale-and-storage.md"
+            },
+            {
+              "name": "07-deep-dive-realtime-analytics",
+              "path": "viewcounter/design/07-deep-dive-realtime-analytics.md"
+            },
+            {
+              "name": "08-deep-dive-global-distribution",
+              "path": "viewcounter/design/08-deep-dive-global-distribution.md"
+            },
+            {
+              "name": "prompt",
+              "path": "viewcounter/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    },
+    {
+      "name": "web-crawler",
+      "files": [],
+      "dirs": [
+        {
+          "name": "design",
+          "files": [
+            {
+              "name": "01-interview-simulation",
+              "path": "web-crawler/design/01-interview-simulation.md"
+            },
+            {
+              "name": "02-api-contracts",
+              "path": "web-crawler/design/02-api-contracts.md"
+            },
+            {
+              "name": "03-url-frontier",
+              "path": "web-crawler/design/03-url-frontier.md"
+            },
+            {
+              "name": "04-fetcher-and-dns",
+              "path": "web-crawler/design/04-fetcher-and-dns.md"
+            },
+            {
+              "name": "05-content-processing-and-extraction",
+              "path": "web-crawler/design/05-content-processing-and-extraction.md"
+            },
+            {
+              "name": "06-robots-txt-and-crawl-ethics",
+              "path": "web-crawler/design/06-robots-txt-and-crawl-ethics.md"
+            },
+            {
+              "name": "07-distributed-crawling",
+              "path": "web-crawler/design/07-distributed-crawling.md"
+            },
+            {
+              "name": "08-crawl-scheduling-and-freshness",
+              "path": "web-crawler/design/08-crawl-scheduling-and-freshness.md"
+            },
+            {
+              "name": "09-spider-traps-and-quality",
+              "path": "web-crawler/design/09-spider-traps-and-quality.md"
+            },
+            {
+              "name": "10-scaling-and-performance",
+              "path": "web-crawler/design/10-scaling-and-performance.md"
+            },
+            {
+              "name": "11-design-trade-offs",
+              "path": "web-crawler/design/11-design-trade-offs.md"
+            },
+            {
+              "name": "prompt",
+              "path": "web-crawler/design/prompt.md"
+            }
+          ],
+          "dirs": []
+        }
+      ]
+    }
+  ]
+}

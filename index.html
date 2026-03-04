@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HLD Design Docs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    body { display: flex; overflow: hidden; }
+
+    /* ── Sidebar ── */
+    #sidebar {
+      width: 268px;
+      min-width: 268px;
+      height: 100vh;
+      background: #0f172a;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-right: 1px solid #1e293b;
+    }
+
+    .sidebar-header {
+      padding: 18px 16px 14px;
+      border-bottom: 1px solid #1e293b;
+      flex-shrink: 0;
+    }
+
+    .sidebar-header h1 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f8fafc;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sidebar-header p {
+      font-size: 11px;
+      color: #475569;
+      margin-top: 3px;
+    }
+
+    #nav-tree {
+      flex: 1;
+      overflow-y: auto;
+      padding: 6px 0 16px;
+    }
+
+    #nav-tree::-webkit-scrollbar { width: 4px; }
+    #nav-tree::-webkit-scrollbar-track { background: transparent; }
+    #nav-tree::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+    #nav-tree::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+    /* Dir row */
+    .nav-dir {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      cursor: pointer;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #94a3b8;
+      user-select: none;
+      transition: color 0.15s;
+    }
+    .nav-dir:hover { color: #e2e8f0; }
+    .nav-dir .chevron {
+      flex-shrink: 0;
+      width: 10px;
+      height: 10px;
+      transition: transform 0.18s ease;
+      opacity: 0.6;
+    }
+    .nav-dir.open .chevron { transform: rotate(90deg); }
+
+    .nav-children { display: none; }
+    .nav-children.open { display: block; }
+
+    /* File row */
+    .nav-file {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px 5px 28px;
+      cursor: pointer;
+      font-size: 12px;
+      color: #64748b;
+      border-left: 2px solid transparent;
+      margin-left: 2px;
+      border-radius: 0 4px 4px 0;
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+    }
+    .nav-file:hover { color: #cbd5e1; background: rgba(255,255,255,0.04); }
+    .nav-file.active {
+      color: #a5b4fc;
+      background: rgba(99,102,241,0.14);
+      border-left-color: #6366f1;
+    }
+    .nav-file .file-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+
+    /* Nested dir indentation */
+    .nav-children .nav-file { padding-left: 40px; }
+    .nav-children .nav-children .nav-file { padding-left: 52px; }
+    .nav-children .nav-dir { padding-left: 26px; }
+    .nav-children .nav-children .nav-dir { padding-left: 38px; }
+
+    /* ── Content ── */
+    #content-wrapper {
+      flex: 1;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #content-wrapper::-webkit-scrollbar { width: 6px; }
+    #content-wrapper::-webkit-scrollbar-track { background: #f1f5f9; }
+    #content-wrapper::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+    #breadcrumb {
+      padding: 10px 40px;
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 12px;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-shrink: 0;
+      min-height: 38px;
+    }
+    #breadcrumb span { color: #64748b; }
+    #breadcrumb .sep { color: #cbd5e1; }
+    #breadcrumb .crumb-last { color: #475569; font-weight: 500; }
+
+    /* Welcome */
+    #welcome {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      text-align: center;
+    }
+    #welcome .welcome-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      opacity: 0.3;
+    }
+    #welcome h2 { font-size: 20px; color: #94a3b8; font-weight: 600; margin-bottom: 6px; }
+    #welcome p { font-size: 13px; color: #cbd5e1; }
+
+    /* Markdown content */
+    #markdown-content {
+      padding: 36px 48px 64px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      display: none;
+    }
+
+    /* ── Markdown Styles ── */
+    .md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+      color: #0f172a;
+      line-height: 1.3;
+      margin: 1.6em 0 0.5em;
+      font-weight: 700;
+    }
+    .md > *:first-child { margin-top: 0; }
+    .md h1 {
+      font-size: 1.9em;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.3em;
+      margin-bottom: 0.6em;
+    }
+    .md h2 {
+      font-size: 1.45em;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 0.25em;
+    }
+    .md h3 { font-size: 1.2em; }
+    .md h4 { font-size: 1.05em; color: #334155; }
+
+    .md p { margin: 0.75em 0; line-height: 1.8; color: #334155; }
+    .md ul, .md ol { margin: 0.75em 0; padding-left: 1.6em; color: #334155; }
+    .md li { margin: 0.3em 0; line-height: 1.75; }
+    .md li > ul, .md li > ol { margin: 0.2em 0; }
+
+    .md code {
+      background: #f1f5f9;
+      color: #6366f1;
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-family: 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;
+      font-size: 0.875em;
+    }
+    .md pre {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 16px 20px;
+      overflow-x: auto;
+      margin: 1.2em 0;
+      border: 1px solid #293548;
+    }
+    .md pre code {
+      background: none;
+      color: #e2e8f0;
+      padding: 0;
+      font-size: 0.85em;
+      line-height: 1.65;
+    }
+
+    .md blockquote {
+      border-left: 3px solid #6366f1;
+      margin: 1em 0;
+      padding: 10px 18px;
+      background: #f8fafc;
+      border-radius: 0 6px 6px 0;
+    }
+    .md blockquote p { margin: 0; color: #64748b; font-style: italic; }
+
+    .md table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.2em 0;
+      font-size: 13.5px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+    .md th {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .md td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      vertical-align: top;
+    }
+    .md tr:last-child td { border-bottom: none; }
+    .md tr:nth-child(even) td { background: #f8fafc; }
+    .md tr:hover td { background: #f0f4ff; }
+
+    .md a { color: #6366f1; text-decoration: none; }
+    .md a:hover { text-decoration: underline; }
+
+    .md hr { border: none; border-top: 1px solid #e2e8f0; margin: 2em 0; }
+
+    .md strong { color: #0f172a; font-weight: 600; }
+    .md em { color: #475569; }
+
+    /* Loading state */
+    .loading {
+      padding: 36px 48px;
+      color: #94a3b8;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid #e2e8f0;
+      border-top-color: #6366f1;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <h1>HLD Docs</h1>
+    <p>System Design Library</p>
+  </div>
+  <div id="nav-tree"></div>
+</nav>
+
+<div id="content-wrapper">
+  <div id="breadcrumb"></div>
+
+  <div id="welcome">
+    <div class="welcome-icon">📐</div>
+    <h2>Select a document</h2>
+    <p>Choose a topic from the sidebar to start reading.</p>
+  </div>
+
+  <div id="markdown-content"></div>
+</div>
+
+<script>
+  const TRANSPARENT = new Set(['design', 'internals', 'system']);
+  const FILE_PRIORITY = ['interview-simulation', 'prompt', 'api-contracts', 'flow'];
+
+  function toTitleCase(str) {
+    return str.replace(/^\d+-/, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function hoistTransparent(node) {
+    const files = [...node.files];
+    const dirs = [];
+    for (const dir of node.dirs) {
+      if (TRANSPARENT.has(dir.name)) {
+        const sub = hoistTransparent(dir);
+        files.push(...sub.files);
+        dirs.push(...sub.dirs);
+      } else {
+        dirs.push({ name: dir.name, ...hoistTransparent(dir) });
+      }
+    }
+    files.sort((a, b) => {
+      const ai = FILE_PRIORITY.indexOf(a.name);
+      const bi = FILE_PRIORITY.indexOf(b.name);
+      if (ai !== -1 && bi !== -1) return ai - bi;
+      if (ai !== -1) return -1;
+      if (bi !== -1) return 1;
+      return a.name.localeCompare(b.name);
+    });
+    return { files, dirs };
+  }
+
+  function chevronSVG() {
+    return `<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="5 2 11 8 5 14"/>
+    </svg>`;
+  }
+
+  function renderTree(node, container, depth) {
+    for (const dir of node.dirs) {
+      const wrapper = document.createElement('div');
+      const header = document.createElement('div');
+      header.className = 'nav-dir' + (depth === 0 ? ' open' : '');
+      header.innerHTML = `${chevronSVG()} <span>${toTitleCase(dir.name)}</span>`;
+
+      const children = document.createElement('div');
+      children.className = 'nav-children' + (depth === 0 ? ' open' : '');
+
+      header.addEventListener('click', () => {
+        header.classList.toggle('open');
+        children.classList.toggle('open');
+      });
+
+      renderTree(dir, children, depth + 1);
+      wrapper.appendChild(header);
+      wrapper.appendChild(children);
+      container.appendChild(wrapper);
+    }
+
+    for (const file of node.files) {
+      const el = document.createElement('div');
+      el.className = 'nav-file';
+      el.dataset.path = file.path;
+      el.innerHTML = `<span class="file-dot"></span><span>${toTitleCase(file.name)}</span>`;
+      el.addEventListener('click', () => loadFile(file.path));
+      container.appendChild(el);
+    }
+  }
+
+  async function init() {
+    try {
+      const res = await fetch('tree.json');
+      const raw = await res.json();
+      const tree = hoistTransparent(raw);
+      renderTree(tree, document.getElementById('nav-tree'), 0);
+
+      const hash = window.location.hash.slice(1);
+      if (hash) loadFile(decodeURIComponent(hash));
+    } catch (e) {
+      console.error('Failed to load tree.json', e);
+    }
+  }
+
+  async function loadFile(filePath) {
+    const contentEl = document.getElementById('markdown-content');
+    const welcomeEl = document.getElementById('welcome');
+    const breadcrumb = document.getElementById('breadcrumb');
+
+    document.querySelectorAll('.nav-file').forEach(el => {
+      el.classList.toggle('active', el.dataset.path === filePath);
+    });
+
+    const activeEl = document.querySelector(`.nav-file[data-path="${CSS.escape(filePath)}"]`);
+    if (activeEl) {
+      let parent = activeEl.parentElement;
+      while (parent && parent.id !== 'nav-tree') {
+        if (parent.classList.contains('nav-children')) {
+          parent.classList.add('open');
+          const header = parent.previousElementSibling;
+          if (header && header.classList.contains('nav-dir')) header.classList.add('open');
+        }
+        parent = parent.parentElement;
+      }
+      setTimeout(() => activeEl.scrollIntoView({ block: 'nearest' }), 50);
+    }
+
+    window.history.replaceState(null, '', '#' + encodeURIComponent(filePath));
+
+    welcomeEl.style.display = 'none';
+    contentEl.style.display = 'block';
+    contentEl.className = '';
+    contentEl.innerHTML = '<div class="loading"><div class="spinner"></div> Loading…</div>';
+
+    const parts = filePath.replace(/\.md$/, '').split('/').filter(p => !TRANSPARENT.has(p));
+    breadcrumb.innerHTML = parts.map((p, i) =>
+      i < parts.length - 1
+        ? `<span>${toTitleCase(p)}</span><span class="sep">/</span>`
+        : `<span class="crumb-last">${toTitleCase(p)}</span>`
+    ).join('');
+
+    try {
+      // Fetch the .md file directly — works both locally and on GitHub Pages
+      const res = await fetch(filePath);
+      if (!res.ok) throw new Error('Not found');
+      const content = await res.text();
+
+      contentEl.className = 'md';
+      contentEl.innerHTML = marked.parse(content);
+      hljs.highlightAll();
+    } catch (e) {
+      contentEl.innerHTML = `<div style="padding:36px;color:#f87171">Failed to load: ${filePath}</div>`;
+    }
+
+    document.getElementById('content-wrapper').scrollTop = 0;
+  }
+
+  marked.setOptions({ gfm: true, breaks: false });
+  init();
+</script>
+</body>
+</html>
