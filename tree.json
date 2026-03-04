@@ -1,5 +1,10 @@
 {
-  "files": [],
+  "files": [
+    {
+      "name": "README",
+      "path": "README.md"
+    }
+  ],
   "dirs": [
     {
       "name": "api-gateway",
@@ -51,10 +56,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "api-gateway/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "api-gateway/design/prompt.md"
             }
           ],
           "dirs": []
@@ -138,10 +139,6 @@
                   "path": "aws/ddb/design/partitioning-model.md"
                 },
                 {
-                  "name": "prompt",
-                  "path": "aws/ddb/design/prompt.md"
-                },
-                {
                   "name": "secondary-indexes",
                   "path": "aws/ddb/design/secondary-indexes.md"
                 },
@@ -194,10 +191,6 @@
                   "path": "aws/ecs/design/networking-and-service-discovery.md"
                 },
                 {
-                  "name": "prompt",
-                  "path": "aws/ecs/design/prompt.md"
-                },
-                {
                   "name": "task-placement",
                   "path": "aws/ecs/design/task-placement.md"
                 }
@@ -226,10 +219,6 @@
                   "path": "aws/emr/design/interview-simulation.md"
                 },
                 {
-                  "name": "prompt",
-                  "path": "aws/emr/design/prompt.md"
-                },
-                {
                   "name": "resource-management",
                   "path": "aws/emr/design/resource-management.md"
                 },
@@ -244,22 +233,6 @@
                 {
                   "name": "storage-layer",
                   "path": "aws/emr/design/storage-layer.md"
-                }
-              ],
-              "dirs": []
-            }
-          ]
-        },
-        {
-          "name": "kinesis",
-          "files": [],
-          "dirs": [
-            {
-              "name": "design",
-              "files": [
-                {
-                  "name": "prompt",
-                  "path": "aws/kinesis/design/prompt.md"
                 }
               ],
               "dirs": []
@@ -290,10 +263,6 @@
                   "path": "aws/lambda/design/invocation-models.md"
                 },
                 {
-                  "name": "prompt",
-                  "path": "aws/lambda/design/prompt.md"
-                },
-                {
                   "name": "vpc-networking",
                   "path": "aws/lambda/design/vpc-networking.md"
                 },
@@ -308,12 +277,7 @@
         },
         {
           "name": "opensearch",
-          "files": [
-            {
-              "name": "prompt",
-              "path": "aws/opensearch/prompt.md"
-            }
-          ],
+          "files": [],
           "dirs": [
             {
               "name": "design",
@@ -385,10 +349,6 @@
                 {
                   "name": "interview-simulation",
                   "path": "aws/redshift/design/interview-simulation.md"
-                },
-                {
-                  "name": "prompt",
-                  "path": "aws/redshift/design/prompt.md"
                 },
                 {
                   "name": "query-processing",
@@ -483,10 +443,6 @@
                   "path": "aws/sns/design/mobile-push.md"
                 },
                 {
-                  "name": "prompt",
-                  "path": "aws/sns/design/prompt.md"
-                },
-                {
                   "name": "sns-sqs-fanout",
                   "path": "aws/sns/design/sns-sqs-fanout.md"
                 }
@@ -525,10 +481,6 @@
                 {
                   "name": "message-lifecycle",
                   "path": "aws/sqs/design/message-lifecycle.md"
-                },
-                {
-                  "name": "prompt",
-                  "path": "aws/sqs/design/prompt.md"
                 },
                 {
                   "name": "scaling-and-performance",
@@ -591,10 +543,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "chatapp/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "chatapp/design/prompt.md"
             }
           ],
           "dirs": []
@@ -691,10 +639,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "distributedcache/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "distributedcache/design/prompt.md"
             }
           ],
           "dirs": []
@@ -761,10 +705,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "dropbox/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "dropbox/design/prompt.md"
             }
           ],
           "dirs": []
@@ -821,10 +761,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "facebook-reactions/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "facebook-reactions/design/prompt.md"
             }
           ],
           "dirs": []
@@ -881,10 +817,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "google-docs/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "google-docs/design/prompt.md"
             }
           ],
           "dirs": []
@@ -945,10 +877,6 @@
             {
               "name": "12-design-trade-offs",
               "path": "instagram/design/12-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "instagram/design/prompt.md"
             }
           ],
           "dirs": []
@@ -1037,10 +965,6 @@
             {
               "name": "10-metrics-for-monitoring-systems",
               "path": "metricsmonitoring/design/10-metrics-for-monitoring-systems.md"
-            },
-            {
-              "name": "prompt",
-              "path": "metricsmonitoring/design/prompt.md"
             }
           ],
           "dirs": []
@@ -1097,10 +1021,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "netflix/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "netflix/design/prompt.md"
             }
           ],
           "dirs": []
@@ -1157,10 +1077,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "payment-system/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "payment-system/design/prompt.md"
             }
           ],
           "dirs": []
@@ -1205,10 +1121,6 @@
             {
               "name": "08-design-trade-offs",
               "path": "ratelimiter/design/08-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "ratelimiter/design/prompt.md"
             }
           ],
           "dirs": []
@@ -1333,10 +1245,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "uber/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "uber/design/prompt.md"
             }
           ],
           "dirs": []
@@ -1409,10 +1317,6 @@
             {
               "name": "08-deep-dive-global-distribution",
               "path": "viewcounter/design/08-deep-dive-global-distribution.md"
-            },
-            {
-              "name": "prompt",
-              "path": "viewcounter/design/prompt.md"
             }
           ],
           "dirs": []
@@ -1469,10 +1373,6 @@
             {
               "name": "11-design-trade-offs",
               "path": "web-crawler/design/11-design-trade-offs.md"
-            },
-            {
-              "name": "prompt",
-              "path": "web-crawler/design/prompt.md"
             }
           ],
           "dirs": []
